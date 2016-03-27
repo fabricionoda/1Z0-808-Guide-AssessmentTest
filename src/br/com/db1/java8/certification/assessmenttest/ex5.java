@@ -1,14 +1,16 @@
 package br.com.db1.java8.certification.assessmenttest;
 
 public class ex5 {
-    public static void addToInt(int x, int amountToAdd) {
-        x = x + amountToAdd;
-    }
-
     public static void main(String[] args) {
-        int a = 15;
-        int b = 10;
-        ex5.addToInt(a, b);
-        System.out.println(a);
+        System.out.print("a");
+        try {
+            System.out.print("b");
+            throw new IllegalArgumentException();
+        } catch (RuntimeException e) {
+            System.out.print("c");
+        } finally {
+            System.out.print("d");
+        }
+        System.out.print("e");
     }
 }
